@@ -1,1 +1,3 @@
-- Inicio do conteudo de logica de programação com javaScript
+- Init content of the programming logic with JavaScript
+  - today was Variables and operators conditional
+ 
