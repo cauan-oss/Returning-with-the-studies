@@ -1,1 +1,5 @@
-var variable = for test;
+learning with to make commit: 
+oque é esse commit
+a msg de commit nao pode ser no passado
+se eu aplicar esse commit ele vai ?
+
