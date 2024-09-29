@@ -123,7 +123,7 @@ if(numberOne % 2 == 0 || numberTwo % 2 == 0 || numberTree % 2 == 0) {
     }
 } */
 
-    let salaryGross = 5189.82;
+    let salaryGross = 5189.83;
     let aliquotaInss ;
     let aliquotaIr;
     let parcela;
@@ -160,10 +160,41 @@ if(numberOne % 2 == 0 || numberTwo % 2 == 0 || numberTree % 2 == 0) {
             salaryLiquido = salaryBase - aliquotaIr
             console.log(`o salario liquido R$ ${salaryLiquido} , voce paga 22.5% de IR`)
         }
-    } else if(salaryBase > 4668.68 && salaryGross > 5189.82){
-        aliquotaInss = 570.88
-        aliquotaInss = ((27.5 / 100) * salaryBase - 869.36)
+    } else {
+     aliquotaIr = (salaryBase * 0.275) - 869.36
+     console.log(aliquotaIr)
+
     }
+    let aliquotINSS;
+    let aliquotIR;
+    
+    let grossSalary = 3000;
+    
+    if (grossSalary <= 1556.94) {
+      aliquotINSS = grossSalary * 0.08;
+    } else if (grossSalary <= 2594.92) {
+      aliquotINSS = grossSalary * 0.09;
+    } else if (grossSalary <= 5189.82) {
+      aliquotINSS = grossSalary * 0.11;
+    } else {
+      aliquotINSS = 570.88;
+    };
+    
+    let baseSalary = grossSalary - aliquotINSS;
+    
+    if (baseSalary <= 1903.98) {
+      aliquotIR = 0;
+    } else if (baseSalary <= 2826.65) {
+      aliquotIR = (baseSalary * 0.075) - 142.80;
+    } else if (baseSalary <= 3751.05) {
+      aliquotIR = (baseSalary * 0.15) - 354.80;
+    } else if (baseSalary <= 4664.68) {
+      aliquotIR = (baseSalary * 0.225) - 636.13;
+    } else {
+      aliquotIR = (baseSalary * 0.275) - 869.36;
+    };
+    
+    console.log("Salário: R$" + (baseSalary - aliquotIR));
     
   
     /* f(salaryGross > 5189.81) {
